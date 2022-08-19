@@ -173,10 +173,7 @@
         </form>
         </div>
     </div>
-    <input type="file" accept="audio/*" capture id="recorder">
-<audio id="player" controls></audio>
-<a id="download">Download</a>
-<button id="stop">Stop</button>
+  
     <!-- /content -->
     <?php $__env->startPush('js'); ?>
 

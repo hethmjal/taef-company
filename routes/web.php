@@ -224,7 +224,7 @@ Route::prefix(LaravelLocalization::setLocale())->group(function () {
     Route::get('/solutions',[FrontServicesController::class,'index'] )->name('front.services');
     Route::get('/solutions/{id}',[FrontServicesController::class,'show'] )->name('front.services-show');
 
-    
+
     Route::get('/about-us',[AboutusController::class,'index'] )->name('front.aboutus');
 
     Route::get('/sales-contact/{id}',[OrderController::class,'index'] )->name('front.salescontact');

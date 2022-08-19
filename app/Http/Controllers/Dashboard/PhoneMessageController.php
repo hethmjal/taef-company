@@ -30,7 +30,7 @@ class PhoneMessageController extends Controller
        $url = "https://www.msegat.com/gw/sendsms.php";
 
       $response = Http::withHeaders(['Content-Type'=>'application/json'])->post($url,$data);
-/*         return $r ;
- */     return redirect()->route('sendPhoneMessagePage',$request->number)->with('success',__('dashboard.mail success'));
+//        return $r ;
+      return redirect()->route('sendPhoneMessagePage',$request->number)->with('success',__('dashboard.mail success'));
     }
 }
