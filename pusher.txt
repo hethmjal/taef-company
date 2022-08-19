@@ -1,0 +1,10 @@
+1- unCommnet Brodcast in config/app.php
+2-in .env Bordcast_driver=pusher
+3-pusher id ,key,secret from pusher to .env
+4- create php artisan make:notification Name
+5- in notification file in via method return ['mail','broadcast','database']
+6- in notification create toBroadcast method and return message
+7- user->notify(new NotificationName($message))$
+8-get js code from pusher website
+9-modify js code (chanel name and event)
+10-set default auth route authEndpoint: "/broadcasting/auth", in js code after  cluster: 'ap2'
