@@ -3,7 +3,6 @@
 @section('content')
     <div class="content">
         <div class="container">
-            <button id="save" type="button" class="btn btn_primary">Save</button>    
     
          </div>
         <div class="container">
@@ -18,19 +17,7 @@
             </div>
         </div>
     </div>
-   <form action="" enctype="multipart/form-data" method="post">
-        @csrf
-    <div id="controls">
-        <button id="recordButton">Record</button>
-        <button id="pauseButton" disabled>Pause</button>
-        <button id="stopButton" disabled>Stop</button>
-     </div>
-     <div id="formats">Format: start recording to see sample rate</div>
-       <p><strong>Recordings:</strong></p>
-       <ol id="recordingsList"></ol>
-       <input class="email" type="email" name="email" value="asd@asd" id="email">
-       <input type="file" class="file" name="file"  id="image">
-    </form>
+ 
     @push('js')
     <script>
         var _token = "{{csrf_token()}}";

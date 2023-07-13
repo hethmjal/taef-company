@@ -62,6 +62,8 @@ class User extends Authenticatable
     public function hasAbility($ability)
     {
         if ($this->roles) {
+
+            
            
         
                 if (in_array($ability,$this->roles)) {

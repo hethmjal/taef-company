@@ -14,10 +14,10 @@ class MarketingController extends Controller
     public function index()
     {
         
-       // $this->authorize('viewAny',Marketing::class);
-        //$sms = SmsData::first();
-      //  $marketings = Marketing::get();
-        return view('admin.dashboard.marketing');
+        $this->authorize('viewAny',Marketing::class);
+        $sms = SmsData::first();
+        $marketings = Marketing::get();
+        return view('admin.dashboard.marketing',compact('marketings','sms'));
     }
 
     public function add()

@@ -10,7 +10,9 @@ class RoleController extends Controller
 {
     public function index($user_id)
     {
+        
         $user = User::findOrFail($user_id);
+        //dd( $user);
         $this->authorize('role',$user); 
 
         return view('admin.dashboard.roles',['user'=>$user]);   

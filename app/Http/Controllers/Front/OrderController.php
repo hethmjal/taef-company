@@ -32,7 +32,6 @@ class OrderController extends Controller
             'phone'=>'required',
             'facility_name'=>'required',
             'city'=>'required',
-            'g-recaptcha-response' => 'required|captcha'
 
         ],
         [
@@ -43,7 +42,6 @@ class OrderController extends Controller
             'phone.required'=>__('front.required phone'),
             'facility_name.required'=>__('front.required facility'),
             'city.required'=>__('front.required city'),  
-            'g-recaptcha-response.required' => __('front.capatcha'),
            // 'g-recaptcha-response.required' => 'Captcha error! try again later or contact site admin.',
           
          ] );

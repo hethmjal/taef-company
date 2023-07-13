@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
-    protected $fillable = ['admin_id','name','roles'];
+    protected $fillable = ['admin_id','roles','name','roles'];
     
     protected $casts = [
         'roles'=>'array',

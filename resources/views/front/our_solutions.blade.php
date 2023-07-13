@@ -64,7 +64,7 @@
                         </p>
 
                     </div>
-                    <div class="d-flex justify-content-between mx-md-5 mx-4">
+                    <div class="d-flex justify-content-between mx-md-5 mx-2">
                         <a href="{{route('front.salescontact',$service->id)}}" class="btn btn-shadow text-primary rounded-pill"> {{__('front.subscribe now')}} </a>
                         <a href="{{route('front.services-show',$service->id)}}" class="btn text-black shadow-none"> {{__('front.more info')}}</a>
                     </div>

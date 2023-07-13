@@ -33,21 +33,20 @@ class MailController extends Controller
 
     public function index2($id)
     {
-        
-       $message = Message::findOrFail($id); 
-        return view('admin.dashboard.send-mail2',['id'=>$message->id]);
+    
+        return view('admin.dashboard.send-mail2',['id'=>$id]);
 
     }
 
     
     public function sendMail2(Request $request)    {
      //   dd($request);
-     $message = Message::findOrFail($request->id); 
+   //  $message = Message::findOrFail($request->id); 
      $title = $request->title;
         $body = $request->body;
         $link = $request->link;  
-        Mail::to($message->email)->send(new MailSender($title, $body,$link));
-        return redirect()->route('dashboard.show-messages',$message->id)->with('success',__('dashboard.mail success'));
+        Mail::to("hethmjal5@gmail.com")->send(new MailSender($title, $body,$link));
+        return redirect()->route('dashboard.show-messages',$request->id)->with('success',__('dashboard.mail success'));
     }
 
     

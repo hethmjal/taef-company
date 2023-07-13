@@ -89,12 +89,12 @@
                                     <label class="custom-control-label" for="customRadioInline2">{{__('front.no')}}</label>
                                 </div>
                             </div>
-                                {!! NoCaptcha::display() !!}
+                              {{--   {!! NoCaptcha::display() !!}
                                 @error('g-recaptcha-response')
                                 <p class="invalid-feedback d-block"> {{$message}}</p>
                                 @enderror
 
-
+ --}}
                                 
                          
                             

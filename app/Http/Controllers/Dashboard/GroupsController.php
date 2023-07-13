@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Group;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use Illuminate\Support\Facades\Auth;
 
 class GroupsController extends Controller
@@ -13,6 +14,7 @@ class GroupsController extends Controller
 
     public function index($name = null)
     {
+        //qaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 
         $this->authorize('viewAny',Group::class); 
        $group=Group::where('name',$name)->first();
     /*    foreach (config('abilities') as $key => $label){
@@ -37,13 +39,14 @@ class GroupsController extends Controller
 
     public function store(Request $request)
     {
+      
         $this->authorize('create',Group::class); 
 
        //dd($request);
-    $data = $request->all();
-    $data['admin_id']= Auth::id();  
-          
-        Group::create($data);
+         $data = $request->all();
+        $data['admin_id']= Auth::id();  
+      //  return $data; 
+      Group::create($data);
        
         
         return redirect()->route('groups')->with('success',__('dashboard.success add'));

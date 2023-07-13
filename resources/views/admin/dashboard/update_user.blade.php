@@ -91,7 +91,6 @@
 </div>
 @push('js')
 <script>
-    $(".select").val({{$user->user_role->role->id}}).change();
 
 </script>
 @endpush

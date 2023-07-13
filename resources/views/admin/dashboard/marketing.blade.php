@@ -85,11 +85,13 @@
       <div class="row no-gutters">
         <div class="col-sm-5">
           <div class="row align-items-center">
-            <img class="img" width="50px"  src="{{asset('uploads/'.$sms->image)}}" alt="sms">
+            <img class="img" width="50px"  src="{{asset('uploads/images/1647425092_sms.png')}}" alt="sms">
             <div class="mx-3">
               <h5 class="card-title text-info mb-5">sms data</h5>
               
-              <p class="card-text"><small class="text-muted"><i class="far fa-clock text-warning"></i> {{$sms->updated_at->diffForHumans()}}</small></p>
+              @if($sms)   <p class="card-text">
+                <small class="text-muted"><i class="far fa-clock text-warning"></i>
+                   {{$sms->updated_at->diffForHumans()}}</small></p>@endif
             </div>
          
           </div>

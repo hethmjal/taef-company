@@ -206,7 +206,7 @@ Route::get('/dashboard/add-application', [MarketingController::class,'add'])->pr
 Route::post('/dashboard/store-application', [MarketingController::class,'store'])->prefix(LaravelLocalization::setLocale())->middleware(['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->name('app.store');
 Route::get('/dashboard/delete-application/{id}', [MarketingController::class,'destroy'])->prefix(LaravelLocalization::setLocale())->middleware(['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->name('app.destroy');
 Route::post('/dashboard/store-application-code', [MarketingController::class,'add_code'])->prefix(LaravelLocalization::setLocale())->middleware(['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->name('app.add_code');
-Route::post('/dashboard/store-sms-data', [MarketingController::class,'add_sms_data'])->prefix(LaravelLocalization::setLocale())->middleware(['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->name('app.smsp');
+Route::post('/dashboard/store-sms-data', [MarketingController::class,'add_sms_data'])->prefix(LaravelLocalization::setLocale())->middleware(['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])->name('app.sms');
 
 
 Route::prefix(LaravelLocalization::setLocale())->group(function () {

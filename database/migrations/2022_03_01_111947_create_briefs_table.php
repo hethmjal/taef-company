@@ -15,6 +15,7 @@ class CreateBriefsTable extends Migration
     {
         Schema::create('briefs', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
             $table->text('arbody');
             $table->text('enbody');
             $table->timestamps();
